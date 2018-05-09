@@ -29,6 +29,10 @@ public class SysLoginController extends BaseController{
 			String captcha = getPara("captcha");
 			String referer = getPara("referer");
 			
+			/*SysUser.dao.set("username", username)
+			.set("password", password)
+			.set("nickname", "超级管理员").save();*/
+			
 			if (StringKit.isBlank(username)) {
 				LOG.info("【用户登录失败】--【失败】--【输入帐号为空】");
 				result.put("code", "usernameIsNull");
